@@ -14,8 +14,8 @@
  * is given, you must return
  * ['Robert De Niro', 'Christofer Nolan', 'Natalie Portman', 'Nick Nolte'].
  *
- * You are encouraged to use the `filter` and `some` array methods to solve this
- * problem. Please do not use `for` or any other kind of loop.
+ * You are encouraged to use the 'filter' and 'some' array methods to solve this
+ * problem. Please do not use 'for' or any other kind of loop.
  *
  * @param {string[]} names
  *
@@ -23,6 +23,16 @@
  */
 function nIsForName(names) {
   // write code here
+  let celebrtities = [];
+  names.filter(function(celebritie) {
+    let partsOfTheName = celebritie.split(' ');
+    if (partsOfTheName.some(function(item) {
+      return item.charAt(0) === 'N';
+    })) {
+      celebrtities.push(celebritie);
+    }
+  });
+  return celebrtities;
 }
 
 module.exports = nIsForName;
