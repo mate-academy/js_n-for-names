@@ -23,9 +23,10 @@
  */
 
 function nIsForName(names) {
+  const LETTER_FOR_SEARCH = 'N';
   const nInName = names.filter(fullName => {
     return fullName.split(' ').some(name => {
-      return name[0] === 'N';
+      return name[0] === LETTER_FOR_SEARCH;
     });
   });
   return nInName;
