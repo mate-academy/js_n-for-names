@@ -21,8 +21,13 @@
  *
  * @return {string[]}
  */
-function nIsForName(names) {
-  // write code here
+function checkN(element) {
+  var words = element.split(' ');
+  return words.find(function(word) {
+    return word[0] === 'N';
+  });
 }
-
+function nIsForName(names) {
+  return names.filter(checkN);
+}
 module.exports = nIsForName;
