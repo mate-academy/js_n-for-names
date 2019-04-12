@@ -22,7 +22,13 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  return names.reduce((resultArray, current) => {
+    let currentArray = current.split(' ');
+    if (currentArray.some((item) => item.startsWith('N'))) {
+      resultArray.push(current);
+    }
+    return resultArray;
+  }, []);
 }
 
 module.exports = nIsForName;
