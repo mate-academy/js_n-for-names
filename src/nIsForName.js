@@ -24,7 +24,7 @@
 function nIsForName(names) {
   let letterForFilter = 'N';
   const filtredNames = names.filter(name => {
-    return name.split(' ').some(item => {
+    return name.split(' ').find(item => {
       return item.charAt(0) === letterForFilter;
     });
   });
