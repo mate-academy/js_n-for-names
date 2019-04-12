@@ -22,7 +22,14 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  const UPPER_CASED_N = 'N';
+  const result = names.filter(name => {
+    if (name.includes(UPPER_CASED_N)) {
+      return true;
+    }
+    return false;
+  });
+  return result;
 }
 
 module.exports = nIsForName;
