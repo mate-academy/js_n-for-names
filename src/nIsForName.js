@@ -22,8 +22,8 @@
  * @return {string[]}
  */
 function checkN(element) {
-  var words = element.split(' ');
-  return words.find(function(word) {
+  const words = element.split(' ');
+  return words.find((word) => {
     return word[0] === 'N';
   });
 }
