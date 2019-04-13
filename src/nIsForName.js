@@ -22,11 +22,9 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  let contensN = [];
+  let contensN;
   contensN = names.filter(function(i) {
-    if (i.includes('N')) {
-      return i;
-    }
+    return i.includes('N');
   });
   return contensN;
 }
