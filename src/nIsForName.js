@@ -24,7 +24,9 @@
 function nIsForName(names) {
   let contensN;
   contensN = names.filter(function(i) {
-    return i.includes('N');
+    return i.split(' ').some(e => {
+      return e[0] === 'N';
+    });
   });
   return contensN;
 }
