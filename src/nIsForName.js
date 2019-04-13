@@ -22,7 +22,13 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  let nNames = names.filter(item => {
+    return item
+      .toUpperCase()
+      .split(' ')
+      .some(namesName => namesName.indexOf('N') === 0);
+  });
+  return nNames;
 }
 
 module.exports = nIsForName;
