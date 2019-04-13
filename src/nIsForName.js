@@ -23,7 +23,7 @@
  */
 function nIsForName(names) {
   const namesWithN = names.filter((person) => {
-    let divided = person.split(' ');
+    const divided = person.split(' ');
     if (divided.some(char => char[0] === 'N')) return person;
   });
   return namesWithN;
