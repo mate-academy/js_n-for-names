@@ -23,16 +23,17 @@
  */
 function nIsForName(names) {
   // write code here
-  const celebrtities = [];
-  names.filter(function(celebritie) {
+  return names.filter(function(celebritie) {
     let partsOfTheName = celebritie.split(' ');
-    if (partsOfTheName.some(function(item) {
+    let isUpperCase = partsOfTheName.some(function(item) {
       return item.charAt(0) === 'N';
-    })) {
-      celebrtities.push(celebritie);
-    }
+    });
+    return isUpperCase;
   });
-  return celebrtities;
 }
+
+(nIsForName(
+  ['Harrison Ford', 'Robert De Niro', 'Morgan Freeman', 'Matt Damon',
+    'Christofer Nolan', 'Natalie Portman', 'Martin Scorsese', 'Nick Nolte']));
 
 module.exports = nIsForName;
