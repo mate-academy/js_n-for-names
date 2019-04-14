@@ -14,8 +14,8 @@
  * is given, you must return
  * ['Robert De Niro', 'Christofer Nolan', 'Natalie Portman', 'Nick Nolte'].
  *
- * You are encouraged to use the `filter` and `some` array methods to solve this
- * problem. Please do not use `for` or any other kind of loop.
+ * You are encouraged to use the 'filter' and 'some' array methods to solve this
+ * problem. Please do not use 'for' or any other kind of loop.
  *
  * @param {string[]} names
  *
@@ -23,6 +23,17 @@
  */
 function nIsForName(names) {
   // write code here
+  return names.filter(function(celebritie) {
+    let partsOfTheName = celebritie.split(' ');
+    let isUpperCase = partsOfTheName.some(function(item) {
+      return item.charAt(0) === 'N';
+    });
+    return isUpperCase;
+  });
 }
+
+(nIsForName(
+  ['Harrison Ford', 'Robert De Niro', 'Morgan Freeman', 'Matt Damon',
+    'Christofer Nolan', 'Natalie Portman', 'Martin Scorsese', 'Nick Nolte']));
 
 module.exports = nIsForName;
