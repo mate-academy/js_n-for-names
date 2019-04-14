@@ -22,7 +22,15 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  if (names.some(i => {
+    return i.includes('N');
+  })) {
+    return names.filter(name => {
+      return name.includes('N');
+    });
+  } else {
+    return [];
+  }
 }
 
 module.exports = nIsForName;
