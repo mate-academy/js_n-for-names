@@ -22,7 +22,12 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  return names.filter(item => {
+    return item
+      .toUpperCase()
+      .split(' ')
+      .some(eachPart => eachPart.indexOf('N') === 0);
+  });
 }
 
 module.exports = nIsForName;
