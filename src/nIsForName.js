@@ -22,7 +22,13 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  let usersWithLetter = 'N';
+  let findUsersByN = names.filter(searchUsers => {
+    return searchUsers.split(' ').some(userWithN => {
+      return userWithN[0] === usersWithLetter;
+    });
+  });
+  return findUsersByN;
 }
 
 module.exports = nIsForName;
