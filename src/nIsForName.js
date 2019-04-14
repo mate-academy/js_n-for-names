@@ -22,15 +22,7 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  let temp = [];
-
-  names.forEach((item) => {
-    if (item.includes('N')) {
-      temp.push(item);
-    }
-  });
-
-  return temp;
+  return names.filter(fullName => fullName.split(' ')
+    .some(partOfName => partOfName[0] === 'N'));
 }
-
 module.exports = nIsForName;
