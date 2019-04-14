@@ -23,7 +23,7 @@
  */
 function nIsForName(names) {
   // write code here
-  let celebrtities = [];
+  const celebrtities = [];
   names.filter(function(celebritie) {
     let partsOfTheName = celebritie.split(' ');
     if (partsOfTheName.some(function(item) {
