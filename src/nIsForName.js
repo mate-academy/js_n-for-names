@@ -25,7 +25,7 @@ function nIsForName(names) {
   const character = 'N'
   const namesWithN = names.filter(item => {
     const separeteName = item.split(' ');
-    return separeteName.some(el => el[0] === letter);
+    return separeteName.some(el => el[0] === character);
   });
   return namesWithN;
 }
