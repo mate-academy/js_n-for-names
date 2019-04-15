@@ -22,9 +22,10 @@
  * @return {string[]}
  */
 function nIsForName(names) {
+  const character = 'N'
   const namesWithN = names.filter(item => {
     const separeteName = item.split(' ');
-    return separeteName.some(el => el[0] === 'N');
+    return separeteName.some(el => el[0] === letter);
   });
   return namesWithN;
 }
