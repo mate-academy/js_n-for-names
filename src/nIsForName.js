@@ -21,14 +21,9 @@
  *
  * @return {string[]}
  */
-function nIsForName(arrayOfName = []) {
-  const hasNFirst = arrayOfName.reduce((hasNFirst, person) => {
-    if (person.split(' ').find(word => word[0] === 'N')) {
-      hasNFirst.push(person);
-    }
-    return hasNFirst;
-  }, []);
-  return hasNFirst;
+function nIsForName(arrayOfName) {
+  return arrayOfName.filter(
+    (person) => person.split(' ').find(word => word[0] === 'N'));
 }
 
 module.exports = nIsForName;
