@@ -23,6 +23,11 @@
  */
 function nIsForName(names) {
   // write code here
+  let namesWithN = [];
+  namesWithN = names.filter(name => name.split(' ')
+    .some(firstLetter => firstLetter[0] === 'N'));
+
+  return namesWithN;
 }
 
 module.exports = nIsForName;
