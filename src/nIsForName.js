@@ -23,7 +23,7 @@
  */
 function nIsForName(names) {
   const resultArray = names.filter(person => {
-    return (person.split(" ")).some(name => name[0] === "N");
+    return person.split(' ').some(name => name[0] === 'N');
   })
   return resultArray;
 }
