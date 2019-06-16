@@ -22,7 +22,8 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  const resultArray = names.filter(value => value.includes('N'));
+  return resultArray;
 }
 
 module.exports = nIsForName;
