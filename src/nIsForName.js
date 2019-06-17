@@ -22,10 +22,8 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  const namesWithFirstN = names.map((row) =>
-    row.split(' ')).filter((fullName) =>
-    fullName.some((elem) => elem[0] === 'N'))
-    .map((row) => row.join(' '));
+  const namesWithFirstN = names.filter((fullName) =>
+    fullName.split(' ').some((elem) => elem[0] === 'N'));
 
   return namesWithFirstN;
 }
