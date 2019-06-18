@@ -22,7 +22,10 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  const resultArray = names.filter(value => value.includes('N'));
+  const resultArray = names.filter(value => {
+    const fullName = value.split(' ');
+    return fullName.some(currenValue => currenValue.includes('N'));
+  });
   return resultArray;
 }
 
