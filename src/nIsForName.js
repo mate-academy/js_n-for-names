@@ -22,7 +22,29 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  const filterFunc = (item) => {
+    const actor = item.split(' ');
+    let firstCharacterName;
+    let firstCharacterMiddleName;
+    let firstCharacterLastName;
+    if (actor.length !== 3) {
+      firstCharacterName = actor[0][0].toLowerCase();
+      firstCharacterLastName = actor[1][0].toLowerCase();
+    } else {
+      firstCharacterName = actor[0][0].toLowerCase();
+      firstCharacterMiddleName = actor[1][0].toLowerCase();
+      firstCharacterLastName = actor[2][0].toLowerCase();
+    }
+    if (firstCharacterName === 'n'
+    || firstCharacterMiddleName === 'n'
+    || firstCharacterLastName === 'n') {
+      return true;
+    } else {
+      return false;
+    }
+  };
+  const result = names.filter(filterFunc);
+  return result;
 }
 
 module.exports = nIsForName;
