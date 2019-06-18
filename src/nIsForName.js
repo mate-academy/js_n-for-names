@@ -24,15 +24,17 @@
 function nIsForName(names) {
   // write code here
   const result = [];
-  for (const name of names) {
+  names.filter((name) => {
     const splitName = name.split(' ');
-    for (const partName of splitName) {
-      if (partName[0] === 'N') {
-        result.push(name);
-        break;
-      }
+    console.log(splitName);
+    if (name.includes('N')
+      && (splitName[0].indexOf('N') === 0
+        || splitName[1].indexOf('N') === 0
+        || splitName[2].indexOf('N') === 0)
+    ) {
+      result.push(name);
     }
-  }
+  });
   return result;
 }
 
