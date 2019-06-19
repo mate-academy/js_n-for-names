@@ -22,14 +22,10 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  function allWordsN(str) {
-    const startwithN = function(element) {
-      return element[0] === 'N';
-    };
+  return names.filter(str => {
     const newstr = str.split(' ');
-    return newstr.some(startwithN);
-  }
-  return names.filter(allWordsN);
+    return newstr.some(el => el.startsWith('N'));
+  });
   // write code here
 }
 
