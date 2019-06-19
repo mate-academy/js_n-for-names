@@ -31,7 +31,7 @@
 function nIsForName(names) {
   const namesWithCapitalN = names
     .map(item => item.split(' '))
-    .filter(item => item.some(x => x[0] === 'N'))
+    .filter(item => item.some(itemOfItem => itemOfItem[0] === 'N'))
     .map(item => item.join(' '));
 
   return namesWithCapitalN;
