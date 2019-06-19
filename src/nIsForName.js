@@ -24,10 +24,8 @@
 function nIsForName(names) {
   function findN(fullName) {
     const firstLastNames = fullName.split(' ');
-    for (const name of firstLastNames) {
-      if (name.startsWith('N')) {
-        return fullName;
-      }
+    if (firstLastNames.some(name => name[0] === 'N')) {
+      return fullName;
     }
   }
   const result = names.filter(findN);
