@@ -23,19 +23,10 @@
  */
 function nIsForName(names) {
   // write code here
-  let result = [];
-  
-  names.filter(name => {
-
-    name.split(' ') //поделил имя и фамилию на отдельные части
-      .some(letter => { //ф-ция на проверку буквы
-        if (letter[0] === 'N') { //если элемент[0] === N;
-          result.push(name);
-        }
-      });
-  });
-
-  return result;
+  return names
+    .filter(name => {
+      return name.split(' ').some(partOfName => partOfName[0] === 'N');
+    });
 }
 
 module.exports = nIsForName;
