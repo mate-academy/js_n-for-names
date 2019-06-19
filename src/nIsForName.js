@@ -22,7 +22,10 @@
  */
 const nIsForName = names => {
   return names.filter(name => {
-    return name.includes('N');
+    const separatedName = name.split(' ');
+    return separatedName.some(part => {
+      return part[0] === 'N';
+    });
   });
 };
 module.exports = nIsForName;
