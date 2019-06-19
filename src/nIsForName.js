@@ -24,10 +24,7 @@
 function nIsForName(names) {
   const filterFunc = (item) => {
     const actors = item.split(' ');
-    if (actors.some(actor => actor[0].toLowerCase() === 'n')) {
-      return true;
-    }
-    return false;
+    return (actors.some(actor => actor[0].toLowerCase() === 'n'));
   };
   const result = names.filter(filterFunc);
   console.log(result);
