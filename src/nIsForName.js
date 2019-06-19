@@ -22,7 +22,10 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  const namesWithCapitalN = names
+    .filter(item => item[0] === 'N' || item.includes(' N'));
+
+  return namesWithCapitalN;
 }
 
 module.exports = nIsForName;
