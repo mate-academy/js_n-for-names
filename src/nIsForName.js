@@ -22,7 +22,13 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  const result = names.filter((item) => {
+    const name = item.split(' ');
+    return name.filter((part) => {
+      return part.toLowerCase()[0] === 'n';
+    }).length !== 0;
+  });
+  return result;
 }
 
 module.exports = nIsForName;
