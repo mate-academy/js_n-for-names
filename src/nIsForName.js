@@ -21,9 +21,18 @@
  *
  * @return {string[]}
  */
+// function nIsForName(names) {
+//   const namesWithCapitalN = names
+//     .filter(item => item[0] === 'N' || item.includes(' N'));
+
+//   return namesWithCapitalN;
+// }
+
 function nIsForName(names) {
   const namesWithCapitalN = names
-    .filter(item => item[0] === 'N' || item.includes(' N'));
+    .map(item => item.split(' '))
+    .filter(item => item.some(x => x[0] === 'N'))
+    .map(item => item.join(' '));
 
   return namesWithCapitalN;
 }
