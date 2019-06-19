@@ -22,6 +22,10 @@
  * @return {string[]}
  */
 function nIsForName(names) {
+  return names.filter(str => {
+    const splitedStr = str.split(' ');
+    return splitedStr.some(el => el.startsWith('N'));
+  });
   // write code here
 }
 
