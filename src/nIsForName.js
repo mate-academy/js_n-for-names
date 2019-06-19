@@ -1,5 +1,4 @@
 'use strict';
-
 /**
  * Implement nIsForName function:
  *
@@ -21,8 +20,9 @@
  *
  * @return {string[]}
  */
-function nIsForName(names) {
-  // write code here
-}
-
+const nIsForName = names => {
+  return names.filter(name => {
+    return name.includes('N');
+  });
+};
 module.exports = nIsForName;
