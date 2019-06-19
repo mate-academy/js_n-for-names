@@ -25,7 +25,7 @@ function nIsForName(names) {
   const returnArray = names.filter(element => {
     const nameParts = element.split(' ');
     return nameParts.some(name => {
-      return name[0] === 'N' || name[0] === 'n';
+      return name[0] === 'N';
     });
   });
   return returnArray;
