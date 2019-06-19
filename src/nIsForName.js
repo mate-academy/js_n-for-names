@@ -26,7 +26,8 @@ const nIsForName = (names) => {
     const name = fullName.split(' ');
 
     return name.some(value => {
-      return value.includes('N');
+      const splitedName = value.split('');
+      return splitedName[0] === 'N';
     });
   });
 
