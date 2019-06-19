@@ -23,11 +23,9 @@
  */
 function nIsForName(names) {
   const returnArray = names.filter(element => {
-    const namesArray = element.split(' ');
-    return namesArray.some(firstLetter => {
-      if (firstLetter[0] === 'N') {
-        return firstLetter;
-      }
+    const nameParts = element.split(' ');
+    return nameParts.some(name => {
+      return name[0] === 'N' || name[0] === 'n';
     });
   });
   return returnArray;
