@@ -23,27 +23,14 @@
  */
 function nIsForName(names) {
   const filterFunc = (item) => {
-    const actor = item.split(' ');
-    let firstCharacterName;
-    let firstCharacterMiddleName;
-    let firstCharacterLastName;
-    if (actor.length !== 3) {
-      firstCharacterName = actor[0][0].toLowerCase();
-      firstCharacterLastName = actor[1][0].toLowerCase();
-    } else {
-      firstCharacterName = actor[0][0].toLowerCase();
-      firstCharacterMiddleName = actor[1][0].toLowerCase();
-      firstCharacterLastName = actor[2][0].toLowerCase();
-    }
-    if (firstCharacterName === 'n'
-    || firstCharacterMiddleName === 'n'
-    || firstCharacterLastName === 'n') {
+    const actors = item.split(' ');
+    if (actors.some(actor => actor[0].toLowerCase() === 'n')) {
       return true;
-    } else {
-      return false;
     }
+    return false;
   };
   const result = names.filter(filterFunc);
+  console.log(result);
   return result;
 }
 
