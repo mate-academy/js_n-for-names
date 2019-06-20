@@ -23,22 +23,12 @@
  */
 function nIsForName(names) {
   const result = names.filter(item => {
-    const newArr = item.split(' ');
-    return newArr.some(firstLetter => {
+    const partsOfName = item.split(' ');
+    return partsOfName.some(firstLetter => {
       return firstLetter[0] === 'N';
     });
   });
   return result;
 }
-nIsForName([
-  'Harrison Ford',
-  'Robert De Niro',
-  'Morgan Freeman',
-  'Matt Damon',
-  'Christofer Nolan',
-  'Natalie Portman',
-  'Martin Scorsese',
-  'Nick Nolte',
-]);
 
 module.exports = nIsForName;
