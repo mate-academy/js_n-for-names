@@ -8,7 +8,7 @@
 <script>
 
   function nIsForName(names) {
-    const res = [];
+    const res = Array.from(new Set([...res]));
     for (const [, fullName] of names.entries()) {
       const lastWord =
           fullName
@@ -22,7 +22,7 @@
         }
       });
     }
-    return Array.from(new Set([...res]));
+    return res;
   }
 
 
