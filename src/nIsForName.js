@@ -23,6 +23,16 @@
  */
 function nIsForName(names) {
   // write code here
+  return (names.filter(startsForN));
+}
+
+function startsForN(fullName) {
+  const splittedName = fullName.split(' ');
+  return splittedName.some(checkFirstLetter);
+}
+
+function checkFirstLetter(splittedName) {
+  return splittedName[0] === 'N';
 }
 
 module.exports = nIsForName;
