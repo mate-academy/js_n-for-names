@@ -21,8 +21,11 @@
  *
  * @return {string[]}
  */
+
 function nIsForName(names) {
-  // write code here
+  const namesWithN = names.filter(fullName => fullName.split(' ')
+    .some(part => part[0] === 'N'));
+  return namesWithN;
 }
 
 module.exports = nIsForName;
