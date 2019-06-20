@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+
+  function nIsForName(names) {
+    const res = [];
+    for (const [, fullName] of names.entries()) {
+      const lastWord =
+          fullName
+              .split(', ')
+              .join('')
+              .split(' ');
+
+      lastWord.forEach(value => {
+        if (value[0].charAt(0) === 'N') {
+          res.push(fullName);
+        }
+      });
+    }
+    return Array.from(new Set([...res]));
+  }
+
+
+  console.log(nIsForName(['Yuouffi Zyagtpkcz Ukzug', 'Vseeke Haby Pwhd', 'Ge Xa Fz',
+    'Vs Cfceknb Hrtm', 'Hxdthw Zglz Eekeh', 'Oism Dxe', 'Mywjwgmc Etjh',
+    'Pasr Ajp Dehnb', 'Svedmtxvq Cxud', 'Btwuwzjy Jowmashhl Ywsc',
+    'Bhfzefus Ydezlwuj', 'Ubcak Dtvwmx Sgmhzwbq', 'Vidaijg Wh Yyed',
+    'Sgdszdfsw Nvskm', 'Hmjf Xzh Alxikwhlc', 'Rzpe Zinmhm',
+    'Qxagodhm Qtwfkacrn Cpbooztpv', 'Pd Gsjxgj', 'Ckxvasss Gefscf Ydj',
+    'Pd Wkoig Bpvf']));
+
+  //['Sgdszdfsw Nvskm']);
+</script>
+</body>
+</html>
