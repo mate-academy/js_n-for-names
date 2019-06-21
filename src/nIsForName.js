@@ -21,17 +21,14 @@
  *
  * @return {string[]}
  */
-function nIsForName(names) {
-  const res = [];
-  for (const [, b] of names.entries()) {
-    const lastWord = b.split(', ').join('').split(' ');
-
-    lastWord.forEach(value => {
-      if (value[0].charAt(0) === 'N') {
-        res.push(b);
-      }
+const nIsForName = names => {
+  const filterNames = names.filter(elem => {
+    const splitNames = elem.split(' ');
+    return splitNames.some(str => {
+      return str[0] === 'N';
     });
-  }
-  return Array.from(new Set([...res]));
-}
+  });
+  return filterNames;
+};
+
 module.exports = nIsForName;
