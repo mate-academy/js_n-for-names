@@ -22,7 +22,13 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  const letterSch = 'N';
+  const resName = names.filter(flName => {
+    return flName.split(' ').some(name => {
+      return name[0] === letterSch;
+    });
+  });
+  return resName;
 }
 
 module.exports = nIsForName;
