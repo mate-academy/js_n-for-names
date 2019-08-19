@@ -32,5 +32,3 @@ function nIsForName(names) {
 }
 
 module.exports = nIsForName;
-
-
