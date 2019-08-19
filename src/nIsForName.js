@@ -29,7 +29,6 @@ function nIsForName(names) {
     console.log(regexp.test(newArr));
     return regexp.test(newArr);
   }
-
   names.filter(callback);
 }
 
