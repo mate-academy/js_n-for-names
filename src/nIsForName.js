@@ -22,7 +22,10 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  const nIs = names.filter(el => el.startsWith('N') || el.includes(' N'));
+  const nIs = names
+    .filter(el => el
+      .split(' ')
+      .some(firstElement => firstElement[0] === ('N')));
   return nIs;
 }
 
