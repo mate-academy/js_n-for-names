@@ -22,7 +22,8 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  const nIs = names.filter(el => el.startsWith('N') || el.includes(' N'));
+  return nIs;
 }
 
 module.exports = nIsForName;
