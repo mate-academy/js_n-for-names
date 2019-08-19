@@ -23,8 +23,8 @@
  */
 function nIsForName(names) {
   return names.filter(item =>
-    item[item.lastIndexOf('N')] === 'N'
-    && item[item.lastIndexOf('N') + 1] !== ' ');
+    item.split(' ')
+      .some(name => name[0].startsWith('N') || name[1].startsWith('N')));
 }
 
 module.exports = nIsForName;
