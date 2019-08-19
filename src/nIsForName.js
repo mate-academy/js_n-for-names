@@ -22,7 +22,9 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  return names.filter(item =>
+    item[item.lastIndexOf('N')] === 'N'
+    && item[item.lastIndexOf('N') + 1] !== ' ');
 }
 
 module.exports = nIsForName;
