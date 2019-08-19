@@ -27,6 +27,7 @@ function nIsForName(names) {
       return item[0] === 'N';
     });
   });
+
   return newArr;
 }
 
