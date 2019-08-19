@@ -22,8 +22,7 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  return names.filter(name => name
-    .split(' ')
+  return names.filter(name => name.split(' ')
     .some(partOfName => partOfName[0] === 'N'));
 }
 
