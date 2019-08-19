@@ -22,7 +22,13 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  if (!names) {
+    return [];
+  }
+
+  return names.filter(firstAndLastName =>
+    firstAndLastName.split(' ').some(el => el[0] === 'N')
+  );
 }
 
 module.exports = nIsForName;
