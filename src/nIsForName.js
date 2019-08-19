@@ -25,8 +25,7 @@ function nIsForName(names) {
   const firstLetter = 'N';
 
   return names.filter(item =>
-    item.split(' ').some(word =>
-      word.startsWith(firstLetter)));
+    item.split(' ').some(word => word.startsWith(firstLetter)));
 }
 
 module.exports = nIsForName;
