@@ -22,12 +22,8 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  if (!names) {
-    return [];
-  }
-
   return names.filter(firstAndLastName =>
-    firstAndLastName.split(' ').some(el => el[0] === 'N')
+    firstAndLastName.split(' ').some(el => el.startsWith('N'))
   );
 }
 
