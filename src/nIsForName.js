@@ -24,9 +24,8 @@
 function nIsForName(names) {
   return names.filter((item, i, arr) =>
     item
-      .toLowerCase()
       .split(' ')
-      .some(x => x[0].indexOf('n') !== -1) === true
+      .some(x => x[0] === 'N') === true
       ? (arr[i] = item)
       : 0
   );
