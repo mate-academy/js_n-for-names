@@ -22,9 +22,9 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  return names.filter((startsWith) => {
-    return startsWith.split(' ').some((partOfName) => {
-      return partOfName[0] === 'N';
+  return names.filter((name) => {
+    return name.split(' ').some((partOfName) => {
+      return partOfName.startsWith('N');
     });
   });
 }
