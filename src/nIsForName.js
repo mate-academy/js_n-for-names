@@ -23,9 +23,7 @@
  */
 function nIsForName(names) {
   return names.filter(name => {
-    if (name.split(' ').some(part => part.startsWith('N'))) {
-      return name;
-    }
+    return name.split(' ').some(part => part.startsWith('N'));
   });
 }
 
