@@ -22,10 +22,9 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  return names.filter(item => (
-    item
-      .split(' ')
-      .some(arrItem => arrItem.charAt(0) === 'N')
+  return names.filter(item => (item
+    .split(' ')
+    .some(arrItem => arrItem.charAt(0) === 'N')
   ));
 }
 
