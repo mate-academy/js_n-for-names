@@ -23,7 +23,9 @@
  */
 
 function nIsForName(names) {
-  return names.filter(name => name.includes(' N') || name[0] === 'N');
+  return names.filter(name => name.split(' ').some((part) => {
+    return part.startsWith('N');
+  }));
 }
 
 module.exports = nIsForName;
