@@ -24,9 +24,7 @@
 function nIsForName(names) {
   return names.filter((fullName) => {
     const nameList = fullName.split(' ');
-    return nameList.reduce((sumBool, partOfName) => {
-      return sumBool || (partOfName[0] === 'N');
-    }, false);
+    return nameList.some(partOfName => partOfName[0] === 'N');
   });
 }
 
