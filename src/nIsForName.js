@@ -22,8 +22,7 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  const nArray = [];
-  names.filter(e => /^N| N/.test(e) ? nArray.push(e) : e);
+  const nArray = names.filter(e => /^N| N/.test(e));  
 
   return nArray;
 }
