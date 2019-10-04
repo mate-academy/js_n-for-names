@@ -23,6 +23,8 @@
  */
 function nIsForName(names) {
   // write code here
+  return names.filter(elem => elem.split(/\s+/)
+    .some(item => item.startsWith('N')));
 }
 
 module.exports = nIsForName;
