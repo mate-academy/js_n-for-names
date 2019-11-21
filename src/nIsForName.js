@@ -22,7 +22,10 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  return names.filter(item => {
+    const firstLetterChecker = item.split(' ');
+    return firstLetterChecker.some(name => name.indexOf('N') === 0);
+  });
 }
 
 module.exports = nIsForName;
