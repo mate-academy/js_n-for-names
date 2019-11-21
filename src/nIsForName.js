@@ -22,7 +22,11 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
-}
-
+  let result = [];
+  result = names.filter(word =>
+    String(word.match(/\b(\w)/g))
+      .split('')
+      .some(letter => letter === 'N'));
+  return result;
+};
 module.exports = nIsForName;
