@@ -26,7 +26,7 @@ function nIsForName(names) {
     function(fullName) {
       return fullName.split(' ')
         .some(function(word) {
-          return word[0] === 'N';
+          return (word[0] === 'N');
         });
     }
   );
