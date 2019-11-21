@@ -23,9 +23,9 @@
  */
 function nIsForName(names) {
   return names
-    .map(item => item.split(' '),)
-    .filter(name => (name.filter(word => word[0] === 'N')).length > 0,)
-    .map(item => item.join(' '));
+    .filter(name => (
+      name.split(' ').filter(word => word.charAt(0) === 'N')
+    ).length > 0);
 }
 
 module.exports = nIsForName;
