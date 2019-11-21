@@ -22,7 +22,14 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  return names.filter(
+    function(fullName) {
+      return fullName.split(' ')
+        .some(function(word) {
+          return word[0] === 'N';
+        });
+    }
+  );
 }
 
 module.exports = nIsForName;
