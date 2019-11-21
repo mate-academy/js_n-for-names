@@ -23,6 +23,8 @@
  */
 function nIsForName(names) {
   // write code here
+
+  return names.filter(item => /N\w+/.test(item));
 }
 
 module.exports = nIsForName;
