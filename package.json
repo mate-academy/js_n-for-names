@@ -1,4 +1,7 @@
 {
+  "jest": {
+    "testEnvironment": "node"
+  },
   "name": "n-is-for-name",
   "version": "1.0.0",
   "description": "N is for Name",
