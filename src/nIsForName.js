@@ -22,12 +22,9 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  return names.map(
-    item => item.split(' '),
-  )
-    .filter(
-      item => (item.filter(word => word[0] === 'N')).length > 0,
-    )
+  return names
+    .map(item => item.split(' '),)
+    .filter(name => (name.filter(word => word[0] === 'N')).length > 0,)
     .map(item => item.join(' '));
 }
 
