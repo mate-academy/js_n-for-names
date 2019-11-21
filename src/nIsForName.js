@@ -22,7 +22,11 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  return names.filter(item => {
+    return item.split(' ').some(elem => {
+      return elem[0] === 'N' ? item : '';
+    });
+  });
 }
 
 module.exports = nIsForName;
