@@ -24,7 +24,7 @@
 function nIsForName(names) {
   return names
     .filter(name => (
-      name.split(' ').filter(word => word.charAt(0) === 'N')
+      name.split(' ').some(word => word.charAt(0) === 'N')
     ).length > 0);
 }
 
