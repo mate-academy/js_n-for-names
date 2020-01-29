@@ -24,7 +24,7 @@
 function nIsForName(names) {
   return names.length
     ? names.filter(name =>
-      name.split(' ').some(([firstLette]) => firstLette === 'N')
+      name.split(' ').some(([firstLetter]) => firstLetter === 'N')
     )
     : [];
 }
