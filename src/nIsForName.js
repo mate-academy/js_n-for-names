@@ -21,8 +21,8 @@
  *
  * @return {string[]}
  */
-function nIsForName(names) {
-  // write code here
-}
+const nIsForName = (names) => (
+  names.filter((item) => item.split(' ').some((word) => word[0] === 'N'))
+);
 
 module.exports = nIsForName;
