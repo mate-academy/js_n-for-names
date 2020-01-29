@@ -22,18 +22,9 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  const result = [];
-  const namesArr = names.map(name => name.split(' '));
+  const firstLetter = /[N]\S/;
 
-  for (let i = 0; i < namesArr.length; i++) {
-    for (let j = 0; j < namesArr[i].length; j++) {
-      if (namesArr[i][j][0] === 'N' && !result.includes(names[i])) {
-        result.push(names[i]);
-      }
-    }
-  }
-
-  return result;
+  return names.filter(name => firstLetter.test(name));
 }
 
 module.exports = nIsForName;
