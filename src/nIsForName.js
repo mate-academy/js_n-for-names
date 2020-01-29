@@ -22,7 +22,9 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  const needed = names.filter(item => /\bN/.test(item));
+
+  return needed;
 }
 
 module.exports = nIsForName;
