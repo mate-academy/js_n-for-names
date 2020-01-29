@@ -22,13 +22,7 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  const result = names.filter(item => {
-    const elems = item.split(' ');
-
-    if (elems.some(x => x[0] === 'N')) {
-      return elems;
-    }
-  });
+  const result = names.filter(item => item.split(' ').some(x => x[0] === 'N'));
 
   return result;
 }
