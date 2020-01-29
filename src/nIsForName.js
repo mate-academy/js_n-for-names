@@ -23,7 +23,7 @@
  */
 function nIsForName(names) {
   const result = [];
-  const namesArr = names.map(word => word.split(' '));
+  const namesArr = names.map(name => name.split(' '));
 
   for (let i = 0; i < namesArr.length; i++) {
     for (let j = 0; j < namesArr[i].length; j++) {
