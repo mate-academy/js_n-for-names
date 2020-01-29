@@ -22,9 +22,9 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  const Nnames = names.filter(item => /\bN\w+\b/g.test(item));
+  const firstLetterNnames = names.filter(item => /\bN\w+\b/g.test(item));
 
-  return Nnames;
+  return firstLetterNnames;
 }
 
 module.exports = nIsForName;
