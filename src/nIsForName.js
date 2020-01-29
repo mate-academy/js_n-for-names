@@ -22,7 +22,18 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  const result = [];
+  const namesArr = names.map(word => word.split(' '));
+
+  for (let i = 0; i < namesArr.length; i++) {
+    for (let j = 0; j < namesArr[i].length; j++) {
+      if (namesArr[i][j][0] === 'N' && !result.includes(names[i])) {
+        result.push(names[i]);
+      }
+    }
+  }
+
+  return result;
 }
 
 module.exports = nIsForName;
