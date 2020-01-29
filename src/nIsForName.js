@@ -23,9 +23,7 @@
  */
 function nIsForName(names) {
   const pattern = /\bN/g;
-  const filteredArray = names.filter(key => {
-    return key.match(pattern);
-  });
+  const filteredArray = names.filter(key => key.match(pattern));
 
   return filteredArray;
 }
