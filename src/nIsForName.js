@@ -25,9 +25,12 @@ function nIsForName(names) {
   const nNames = [];
 
   names.filter(name => {
-    if (name.match(/\bN[a-z]+/g)) {
-      nNames.push(name);
-    }
+    name.split(' ')
+      .some(namePart => {
+        if (namePart[0] === 'N' && !nNames.includes(name)) {
+          nNames.push(name);
+        }
+      });
   });
 
   return nNames;
