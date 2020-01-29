@@ -22,7 +22,12 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  const pattern = /\bN/g;
+  const filteredArray = names.filter(key => {
+    return key.match(pattern);
+  });
+
+  return filteredArray;
 }
 
 module.exports = nIsForName;
