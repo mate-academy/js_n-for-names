@@ -22,7 +22,13 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  const callback = item => item[0] === 'N';
+  const listWithN = names
+    .map(item => item.split(' '))
+    .filter(item => item.some(callback))
+    .map(item => item.join(' '));
+
+  return listWithN;
 }
 
 module.exports = nIsForName;
