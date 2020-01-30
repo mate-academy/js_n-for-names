@@ -24,7 +24,7 @@
 function nIsForName(names) {
   return names
     .filter(item => item.split(' ')
-      .some(itemInside => itemInside[0] === 'N')
+      .some(partOfName => partOfName[0] === 'N')
     );
 }
 
