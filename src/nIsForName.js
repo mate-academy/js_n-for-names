@@ -22,11 +22,7 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  const isNFirst = function(item, index, arr) {
-    return item.split(' ').some(name => name[0] === 'N');
-  };
-
-  return names.filter(isNFirst);
+  return names.filter(item => item.split(' ').some(name => name[0] === 'N'));
 }
 
 module.exports = nIsForName;
