@@ -22,7 +22,7 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  return names.filter(nameFirstLetterN => /\bN/.test(nameFirstLetterN));
 }
 
 module.exports = nIsForName;
