@@ -21,16 +21,11 @@
  *
  * @return {string[]}
  */
-// function nIsForName(names) {
-//   return names.filter((item) =>
-//     item.split(' ').some((itemInside) => itemInside[0] === 'N'));
-// }
-
 function nIsForName(names) {
-  const callback = item =>
-    item.split(' ').some(itemInside => itemInside[0] === 'N');
-
-  return names.filter(callback);
+  return names
+    .filter(item => item.split(' ')
+      .some(itemInside => itemInside[0] === 'N')
+    );
 }
 
 module.exports = nIsForName;
