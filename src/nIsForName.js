@@ -22,13 +22,8 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  const arrNamesWithN = names.filter(function(item) {
-    const arrOfFullNames = item.split(' ');
-
-    return arrOfFullNames.some(element => element[0] === 'N');
-  });
-
-  return arrNamesWithN;
+  return names.filter(item => item.split(' ')
+    .some(element => element[0] === 'N'));
 }
 
 module.exports = nIsForName;
