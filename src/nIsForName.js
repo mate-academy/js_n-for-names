@@ -34,7 +34,7 @@ function nIsForName(names) {
 
   // return result;
 
-  return names.filter((value) => /^N| N/g.test(value));
+  return names.filter(value => /^N| N/g.test(value));
 }
 
 module.exports = nIsForName;
