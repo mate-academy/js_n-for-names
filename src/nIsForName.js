@@ -22,13 +22,11 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  let sortedNames = [];
-
-  sortedNames = names.filter(name => {
+  names = names.filter(name => {
     name.split(' ').some(partOfName => /\bN/g.test(partOfName))
   });
 
-  return sortedNames;
+  return names;
 }
 
 module.exports = nIsForName;
