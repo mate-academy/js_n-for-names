@@ -22,7 +22,21 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  const empty = [];
+
+  if (names.length === 0) {
+    return empty;
+  }
+
+  function callback(name) {
+    const checkedName = name.split(' ').some(el => (el[0] === 'N'));
+
+    return checkedName;
+  }
+
+  const result = names.filter(callback);
+
+  return result;
 }
 
 module.exports = nIsForName;
