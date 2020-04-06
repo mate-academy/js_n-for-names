@@ -22,7 +22,8 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  return names.filter(n => n.split(' ').some(v => v[0].includes('N')));
+  return names.filter(fullName => fullName.split(' ')
+    .some(v => v[0].includes('N')));
 }
 
 module.exports = nIsForName;
