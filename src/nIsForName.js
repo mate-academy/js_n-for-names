@@ -23,6 +23,15 @@
  */
 function nIsForName(names) {
   // write code here
+  const arr = [];
+
+  names.some(a => {
+    if (a.match(/\bN/g) !== null) {
+      arr.push(a);
+    }
+  });
+
+  return arr;
 }
 
 module.exports = nIsForName;
