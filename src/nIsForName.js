@@ -23,6 +23,11 @@
  */
 function nIsForName(names) {
   // write code here
+  const letter = 'N';
+  const myNames = names.filter((x) => x.split(' ')
+    .some((piece) => piece.startsWith(letter)));
+
+  return myNames;
 }
 
 module.exports = nIsForName;
