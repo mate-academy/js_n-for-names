@@ -22,7 +22,7 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  const callback = (elements) => elements.match(/\b[N]/);
+  const callback = (elements) => /\b[N]/.test(elements);
 
   return names.filter(callback);
 }
