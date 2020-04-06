@@ -22,16 +22,9 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  const result = [];
   const regex = /\b(n([a-z]+))\b/i;
 
-  for (const name of names) {
-    if (regex.test(name)) {
-      result.push(name);
-    }
-  }
-
-  return result;
+  return names.filter(x => regex.test(x));
 }
 
 module.exports = nIsForName;
