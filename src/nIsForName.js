@@ -22,7 +22,13 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  return names.filter(function(name) {
+
+    if (name.split(' ').some(word => word.startsWith('N'))) {
+      return name;
+    }
+  });
+
 }
 
 module.exports = nIsForName;
