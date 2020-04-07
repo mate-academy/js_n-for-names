@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 'use strict';
 
 /**
@@ -22,19 +23,11 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  const empty = [];
-
   if (names.length === 0) {
-    return empty;
+    return [];
   }
 
-  function callback(name) {
-    const checkedName = name.split(' ').some(el => (el[0] === 'N'));
-
-    return checkedName;
-  }
-
-  const result = names.filter(callback);
+  const result = names.filter(name => name.split(' ').some(el => (el[0] === 'N')));
 
   return result;
 }
