@@ -22,13 +22,7 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  const firstLetterOfTheName = 'N';
-  const filteredNames = names.filter((fullName) => {
-    return fullName.split(' ').some((partOfName) => {
-      return partOfName[0] === firstLetterOfTheName;
-    });
-  });
-  return filteredNames;
+  // write code here
 }
 
 module.exports = nIsForName;
