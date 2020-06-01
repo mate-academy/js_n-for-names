@@ -23,6 +23,15 @@
  */
 function nIsForName(names) {
   // write code here
+  const callback = function(item, index, arr) {
+    const firstLetter = 'N';
+
+    if (item.split(' ').some(x => x[0] === firstLetter)) {
+      return item;
+    }
+  };
+
+  return names.filter(callback);
 }
 
 module.exports = nIsForName;
