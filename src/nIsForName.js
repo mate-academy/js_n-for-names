@@ -29,9 +29,8 @@ function nIsForName(names) {
       return unit;
     };
   };
-  const result = names.filter(callback);
 
-  return result;
+  return names.filter(callback);
 }
 
 module.exports = nIsForName;
