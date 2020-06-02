@@ -31,10 +31,6 @@ function nIsForName(names) {
   };
   const result = names.filter(callback);
 
-  if (result.length === 0) {
-    return [];
-  };
-
   return result;
 }
 
