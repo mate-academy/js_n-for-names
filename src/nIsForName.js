@@ -23,11 +23,7 @@
  */
 function nIsForName(names) {
   const callback = (unit) => {
-    const pattern = /\bN/g;
-
-    if (unit.match(pattern) !== null) {
-      return unit;
-    };
+    return unit.match(/\bN/g) !== null;
   };
 
   return names.filter(callback);
