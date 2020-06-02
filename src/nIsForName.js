@@ -22,7 +22,7 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  const callback = (unit, index, array) => {
+  const callback = (unit) => {
     const pattern = /\bN/g;
 
     if (unit.match(pattern) !== null) {
