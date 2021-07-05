@@ -21,8 +21,9 @@
  *
  * @return {string[]}
  */
-function nIsForName(names) {
-  // write code here
+function nIsForName(arrayOfName) {
+  return arrayOfName.filter(
+    (person) => person.split(' ').find(word => word[0] === 'N'));
 }
 
 module.exports = nIsForName;
