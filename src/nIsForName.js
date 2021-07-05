@@ -23,6 +23,11 @@
  */
 function nIsForName(names) {
   // write code here
+  const namesN = names.filter((name) => {
+    return name.includes('N');
+  });
+
+  return namesN;
 }
 
 module.exports = nIsForName;
