@@ -22,7 +22,47 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  // Solution with forEach and Set:
+  /* const nParty = [];
+
+  names.forEach(function(item, key, array){
+    const checker = item.split(' ');
+
+    checker.forEach(function(name, key, array) {
+      if(name.indexOf('N') === 0) {
+        nParty.push(item);
+      }
+    });
+  });
+
+  const filtredActors = [...new Set(nParty)];
+
+  return filtredActors; */
+
+  // Solution with filter and sheetcode:
+  /* const filtredArray = names.filter(function(item, key, array) {
+    const checker = item.split(' ');
+    const checkerObj = { ...checker };
+
+    for (let name in checkerObj) {
+      if (checkerObj[name].indexOf('N') === 0) {
+        return true;
+      }
+    }
+  });
+
+  return filtredArray; */
+
+  // Solution with Filter and Some (true):
+  const filtredArray = names.filter(function(item, key, array) {
+    const checker = item.split(' ');
+
+    return checker.some(function(name) {
+      return name.indexOf('N') === 0;
+    });
+  });
+
+  return filtredArray;
 }
 
 module.exports = nIsForName;
