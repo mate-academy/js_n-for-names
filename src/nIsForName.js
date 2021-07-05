@@ -21,8 +21,6 @@
  *
  * @return {string[]}
  */
-function nIsForName(names) {
-  // write code here
-}
+const nIsForName = (names) => names.filter((item) => item.match(/\bN/g));
 
 module.exports = nIsForName;
