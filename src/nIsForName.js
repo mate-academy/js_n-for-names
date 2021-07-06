@@ -22,7 +22,12 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  const filterFunc = (item) => {
+    const actors = item.split(' ');
+    return (actors.some(actor => actor[0].match(/[Nn]/)));
+  };
+  const result = names.filter(filterFunc);
+  return result;
 }
 
 module.exports = nIsForName;
