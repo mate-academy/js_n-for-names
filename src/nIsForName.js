@@ -21,8 +21,12 @@
  *
  * @return {string[]}
  */
-function nIsForName(names) {
-  // write code here
+function nIsForName(names, letter = 'N') {
+  const findNames = (item) => {
+    return item.split(' ').some((i) => i[0].toUpperCase() === letter);
+  };
+  const namesN = names.filter(findNames);
+  return namesN;
 }
 
 module.exports = nIsForName;
