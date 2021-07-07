@@ -22,7 +22,13 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  const filterPeopleOfName = names.filter((fullName) => {
+    return fullName.split(' ').some(partName => {
+      return partName[0] === 'N';
+    });
+  });
+
+  return filterPeopleOfName;
 }
 
 module.exports = nIsForName;
