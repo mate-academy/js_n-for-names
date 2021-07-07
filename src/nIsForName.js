@@ -22,7 +22,18 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  const isNamePersonHasOneLetter = person => {
+    const theSameLetterName = person.split(' ');
+    const ifFirstLetter = (user) => {
+      return user[0] === 'N';
+    };
+
+    return theSameLetterName.some(ifFirstLetter);
+  };
+
+  const result = names.filter(isNamePersonHasOneLetter);
+
+  return result;
 }
 
 module.exports = nIsForName;
