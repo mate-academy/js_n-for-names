@@ -21,8 +21,12 @@
  *
  * @return {string[]}
  */
-function nIsForName(names) {
-  // write code here
-}
+const nIsForName = names => {
+  const letter = 'N';
+  return names.filter(name => {
+    const words = name.split(' ');
+    return words.some(word => word[0] === letter);
+  });
+};
 
 module.exports = nIsForName;
