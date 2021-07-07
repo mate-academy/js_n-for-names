@@ -22,7 +22,18 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  const result = [];
+  for (let i = 0; i < names.length; i++) {
+    const arr = names[i].split(' ');
+    arr.some(function(el, ind) {
+      if (el.startsWith('N')) {
+        if (result.indexOf(arr.join(' ')) === -1) {
+          result.push(arr.join(' '));
+        }
+      }
+    });
+  }
+  return result;
 }
 
 module.exports = nIsForName;
