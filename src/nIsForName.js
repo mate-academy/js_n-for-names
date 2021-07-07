@@ -22,7 +22,8 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  return names.filter(actor => actor.split(' ')
+    .some(name => name[0] === 'N'));
 }
 
 module.exports = nIsForName;
