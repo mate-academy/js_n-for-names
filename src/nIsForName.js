@@ -22,7 +22,13 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  const result = names.filter(function(actorName) {
+    const searchPattern = /^n|\sn/gi;
+
+    return searchPattern.test(actorName);
+  });
+
+  return result.length === 0 ? [] : result;
 }
 
 module.exports = nIsForName;
