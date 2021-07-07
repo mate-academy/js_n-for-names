@@ -23,6 +23,13 @@
  */
 function nIsForName(names) {
   // write code here
+  const callback = (item, index, arr) => {
+    let newArr = item.split(' ');
+    const regexp = /\bN/g;
+    console.log(regexp.test(newArr));
+    return regexp.test(newArr);
+  }
+  names.filter(callback);
 }
 
-module.exports = nIsForName;
+    module.exports = nIsForName;
