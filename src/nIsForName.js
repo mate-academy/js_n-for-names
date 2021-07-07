@@ -23,6 +23,12 @@
  */
 function nIsForName(names) {
   // write code here
+  return names.filter(name => {
+    const splittedNames = name.split(' ');
+    return splittedNames.some(namePart => {
+      return namePart.startsWith('N');
+    });
+  });
 }
 
 module.exports = nIsForName;
