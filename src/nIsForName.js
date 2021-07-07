@@ -22,7 +22,10 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  const filterNames = names.filter((item) =>
+    item.toUpperCase().split(' ').some((value) => value.startsWith('N')));
+
+  return filterNames;
 }
 
 module.exports = nIsForName;
