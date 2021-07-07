@@ -22,7 +22,13 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  const returnArrNames = names.filter(item => {
+    return item.split(' ').some(charFirst => {
+      return charFirst.startsWith('N');
+    });
+  });
+
+  return returnArrNames;
 }
 
 module.exports = nIsForName;
