@@ -22,7 +22,10 @@
  * @return {string[]}
  */
 function nIsForName(names) {
-  // write code here
+  const startsWithN = names
+    .filter(fullName => (fullName.split(' ')
+      .some(name => name[0] === 'N')));
+  return startsWithN;
 }
 
 module.exports = nIsForName;
